@@ -8,11 +8,46 @@
 
 ### Design de l'application
 
-Faire 3 fichiers de configuration pour : 
+**Protocol SMTP** :
 
-* Définir une liste d'emails victimes
-* Définir combien de groupes sont créés
-* Définir une liste de messages 
+ https://tools.ietf.org/html/rfc5321#appendix-D
 
 
 
+**Fichiers de configuration : (JSON ou texte)** 
+
+* Fichier texte de config pour les mails victimes
+
+* Fichier texte de config pour les messages
+
+
+
+**Traitement des fichiers de config : **
+
+* Une classe de configuration pour les paramètres du serveur : 
+
+  * Adresse du serveur
+
+  * Port
+
+  * Nombre de groupes
+
+* Une classe de configuration pour traiter les fichiers de config (Va parser les données et mettre les adresses dans une liste <Person>)
+
+
+
+**Création des pranks :** 
+
+* Objet Group : contient des Person
+* Objet Person : représente une personne (adresse mail)
+* Objet Message : contient le message (En-tête : From, To, Cc, Subject et le texte du message)
+
+* Objet Prank qui contient l'envoyeur, le(s) destinataire(s) et le message.
+* Un fichier PrankMaker va créer un Prank d'après les classes Groupe, Victimes, Message
+
+
+
+**Client SMTP :**
+
+* Connecter au serveur SMTP avec un socket
+* Récupérer un objet Prank et l'utiliser pour envoyer un mail. 

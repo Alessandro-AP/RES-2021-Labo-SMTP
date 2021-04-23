@@ -21,33 +21,33 @@ import java.util.List;
  */
 public class Prank {
 
-    private String victimSender;
+    private Person victimSender;
     private List<Person> victimRecipients = new ArrayList<>();
     private String message;
 
-    //victimSender getter & setter
-    public String getVictimSender(){
+    /** Victim sender getter */
+    public Person getVictimSender(){
         return victimSender;
     }
-
-    public void setVictimSender(String victimSender){
+    /** Victim sender getter */
+    public void setVictimSender(Person victimSender){
         this.victimSender = victimSender;
     }
 
-    //victimRecipients getter & setter
+    /** Victims receivers getter */
     public List<Person> getVictimRecipients(){
         return new ArrayList<>(victimRecipients);
     }
-
-    public void setVictimRecipients(List<Person> victimRecipients){
+    /** Victims receivers setter */
+    public void setVictimReceiver(List<Person> victimRecipients){
         this.victimRecipients = victimRecipients;
     }
 
-    //message getter & setter
+    /** Message getter */
     public String getMessage(){
         return message;
     }
-
+    /** Message setter */
     public void setMessage(String message){
         this.message = message;
     }

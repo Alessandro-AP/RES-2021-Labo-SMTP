@@ -21,10 +21,15 @@ public class Group {
 
     private final List<Person> groupMembers = new ArrayList<>();
 
+    /**
+     * Add member to group
+     * @param person to be added
+     */
     public void addMember(Person person){
         groupMembers.add(person);
     }
 
+    /** Memebers getter */
     public List<Person> getMember(){
         return new ArrayList<>(groupMembers);
     }

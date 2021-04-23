@@ -16,9 +16,11 @@ package application.mail;
  */
 public class Person {
 
-    private String address;
+    private final String address;
 
-    Person(String address){
-        this.address = address;
-    }
+    /** Constructor */
+    public Person(String address){ this.address = address; }
+
+    /** Address getter */
+    public String getAddress() { return address;}
 }

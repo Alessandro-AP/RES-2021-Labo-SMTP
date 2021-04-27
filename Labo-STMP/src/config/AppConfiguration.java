@@ -25,8 +25,6 @@ public class AppConfiguration {
     private int noPort;
     //Number of groups
     private int nbGroups ;
-    //Number of people
-    private int nbPeopleInGroup;
 
     /** Constructor */
     public AppConfiguration(String configFilePath) throws IOException {
@@ -37,9 +35,8 @@ public class AppConfiguration {
         serverAddress   = properties.getProperty("serverAddress");
         noPort          = Integer.parseInt(properties.getProperty("serverPort"));
         nbGroups        = Integer.parseInt(properties.getProperty("numberOfGroups"));
-        nbPeopleInGroup = Integer.parseInt(properties.getProperty("numbersPeopleInGroup"));
-
     }
+
     /** Server address getter */
     public String getServerAddress() {
         return serverAddress;
@@ -51,9 +48,5 @@ public class AppConfiguration {
     /** Number of groups getter */
     public int getNbGroups() {
         return nbGroups;
-    }
-    /** Number of people getter */
-    public int getNbPeopleInGroup() {
-        return nbPeopleInGroup;
     }
 }

@@ -29,7 +29,7 @@ public class DataParser {
      * @param path to the file containing the emails
      * @return the list of person
      */
-    public static  LinkedList<Person> parseEmails(String path) {
+    public static LinkedList<Person> parseEmails(String path) {
 
         LinkedList<Person> emails = new LinkedList<>();
         BufferedReader reader = null;
@@ -84,7 +84,6 @@ public class DataParser {
                     content.append(System.lineSeparator());
                 }
             }
-
         } catch (IOException e) {
             e.printStackTrace();
 
@@ -95,10 +94,7 @@ public class DataParser {
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
-
         }
         return messages;
     }
-
-
 }

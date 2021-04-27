@@ -11,7 +11,9 @@
 
 package application.mail;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Mail's message, include header (From, to, cc, subject) and text
@@ -19,8 +21,8 @@ import java.util.Arrays;
 public class Email {
 
     private String from;
-    private String[] to = new String[0];
-    private String[] cc = new String[0];
+    private List<String> to = new ArrayList<>();
+    private List<String> cc = new ArrayList<>();
     private String subject;
     private String text;
 
@@ -35,29 +37,32 @@ public class Email {
     }
 
     /** Receivers getter */
-    public String[] getTo(){
-        String[] toTab = Arrays.copyOf(to, to.length);
+    public List<String> getTo(){
+        List<String> toTab = new ArrayList<>(this.to);
         return toTab;
     }
+
     /** Receivers setter  */
-    public void setTo(String[] toSrc){
-        this.to = Arrays.copyOf(toSrc, toSrc.length);
+    public void setTo(List<String> toSrc){
+        this.to = new ArrayList<>(toSrc);
     }
 
     /** Carbon Copy getter */
-    public String[] getCc(){
-        String[] ccTab = Arrays.copyOf(cc, cc.length);
+    public List<String> getCc(){
+        List<String> ccTab = new ArrayList<>(this.cc);
         return ccTab;
     }
+
     /** Carbon Copy setter */
-    public void setCc(String[] ccSrc){
-        this.cc = Arrays.copyOf(ccSrc, ccSrc.length);
+    public void setCc(List<String> ccSrc){
+        this.cc = new ArrayList<>(ccSrc);
     }
 
     /** Subject getter  */
     public String getSubject(){
         return subject;
     }
+
     /** Subject setter  */
     public void setSubject(String subject){
         this.subject = subject;
@@ -67,9 +72,9 @@ public class Email {
     public String getText(){
         return text;
     }
+
     /** Text setter  */
     public void setText(String text){
         this.text = text;
     }
-
 }

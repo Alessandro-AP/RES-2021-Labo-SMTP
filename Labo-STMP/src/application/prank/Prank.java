@@ -29,6 +29,7 @@ public class Prank {
     public Person getVictimSender(){
         return victimSender;
     }
+
     /** Victim sender getter */
     public void setVictimSender(Person victimSender){
         this.victimSender = victimSender;
@@ -38,6 +39,16 @@ public class Prank {
     public List<Person> getVictimRecipients(){
         return new ArrayList<>(victimRecipients);
     }
+
+    /** Victims receivers getter in String format*/
+    public List<String> getVictimRecipientsStr(){
+        List<String> victimRecipientsStr = new ArrayList<>();
+        for(Person p : victimRecipients){
+            victimRecipientsStr.add(p.getAddress());
+        }
+        return victimRecipientsStr;
+    }
+
     /** Victims receivers setter */
     public void setVictimReceiver(List<Person> victimRecipients){
         this.victimRecipients = victimRecipients;
@@ -47,9 +58,9 @@ public class Prank {
     public String getMessage(){
         return message;
     }
+
     /** Message setter */
     public void setMessage(String message){
         this.message = message;
     }
-
 }

@@ -41,14 +41,31 @@ public class PrankMaker {
         LinkedList<Person> people = parseEmails("src/data/emails.txt");
         LinkedList<String> messages = parseMessages("src/data/messages.txt");
         int nbGroups = config.getNbGroups();
-        int nbPeopleInGroup = config.getNbPeopleInGroup();
 
         // Check if there are enough people to form a group
-        if(people.size() / nbGroups < 3)
-            throw new InvalidPropertiesFormatException("Pas assez personnes pour créer un prank");
+        if(people.size() / nbGroups < 3){
+            throw new InvalidPropertiesFormatException("Not enough people to create a prank");
+        }
 
         // Randomise list of victims
         Collections.shuffle(people, new Random());
+
+        //Get the number of people per group
+        int nbPeopleInGroup = people.size() / nbGroups;
+
+        //Number of persons remaining
+        int nbrPersonRemaining = people.size();
+
+        //List for number of persons in each group
+        List<Integer> nbPeopleInGroupList = new ArrayList<>();
+
+        //Assign the correct number of persons in each group
+        while(nbrPersonRemaining >= nbPeopleInGroup * 2){
+            nbPeopleInGroupList.add(nbPeopleInGroup);
+            nbrPersonRemaining -= nbPeopleInGroup;
+        }
+        //Add the remaining persons to the last group
+        nbPeopleInGroupList.add(nbrPersonRemaining);
 
         // Create groups
         LinkedList<Group> groups = new LinkedList<>();
@@ -56,8 +73,9 @@ public class PrankMaker {
             Group group = new Group();
 
             // Add group components
-            for(int j = 0; j < nbPeopleInGroup && !(people.isEmpty()); ++j)
+            for(int j = 0; j < nbPeopleInGroupList.get(i) && !(people.isEmpty()); ++j){
                 group.addMember(people.pop());
+            }
 
             groups.add(group);
         }
@@ -83,7 +101,5 @@ public class PrankMaker {
         }
 
         return pranks;
-
     }
-
 }

@@ -16,6 +16,7 @@ package application.mail;
  */
 public class Person {
 
+    //Mail address
     private final String address;
 
     /** Constructor */

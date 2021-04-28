@@ -2,7 +2,7 @@
 
 ###### Alessando Parrino & Dylan Canton
 
-###### 16.04.2021
+###### 02.04.2021
 
 ---
 
@@ -14,7 +14,7 @@
 
 
 
-**Fichiers de configuration : (JSON ou texte)** 
+**Fichiers de configuration : (texte)** 
 
 * Fichier texte de config pour les mails victimes
 
@@ -51,3 +51,38 @@
 
 * Connecter au serveur SMTP avec un socket
 * Récupérer un objet Prank et l'utiliser pour envoyer un mail. 
+
+
+
+---
+
+### Description of project
+
+
+
+
+
+---
+
+### Setting up a mock SMTP server
+
+
+
+
+
+---
+
+### Instructions configuration
+
+##### Configure text files
+
+#####  Launching a prank campaign
+
+
+
+
+
+---
+
+### Implementation
+

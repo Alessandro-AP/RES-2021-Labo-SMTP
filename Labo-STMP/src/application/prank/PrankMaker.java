@@ -73,7 +73,7 @@ public class PrankMaker {
             Group group = new Group();
 
             // Add group components
-            for(int j = 0; j < nbPeopleInGroupList.get(i) && !(people.isEmpty()); ++j){
+            for(int j = 0; j < nbPeopleInGroupList.get(i); ++j){
                 group.addMember(people.pop());
             }
 

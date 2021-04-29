@@ -12,6 +12,7 @@
 package smtp;
 
 import application.mail.Email;
+import application.prank.Prank;
 
 import java.io.BufferedReader;
 import java.io.IOException;

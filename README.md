@@ -23,7 +23,6 @@ To do this, you can specify a list of victims to form groups of people. Each gro
    git clone https://github.com/Alessandro-AP/RES-2021-Labo-SMTP.git
    ```
 
-   
 2. Execute main's application in  ```MainApplication.java```
 
 
@@ -95,7 +94,7 @@ Two methods of setting up the server are presented here, the user is free to cho
 
   4. You should have the following result at the console, it means that the mockserver started correctly:
 
-     ![mockserverLaunchTerminalOutput](figures\mockserverLaunchTerminalOutput.PNG)
+     ![mockserverLaunchTerminalOutput](figures/mockserverLaunchTerminalOutput.PNG)
 
   5. The mockserver is now started and ready to work. 
 
@@ -141,7 +140,7 @@ MockMock provides a web interface to view the received mails, to access them, op
 
 You should have the following page in your browser : 
 
-![mockserverPage](figures\mockserverPage.PNG)
+![mockserverPage](figures/mockserverPage.PNG)
 
 The mockserver is now started and ready to work. Use the browser interface to see and manage emails. 
 

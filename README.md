@@ -22,6 +22,7 @@ To do this, you can specify a list of victims to form groups of people. Each gro
    ```sh
    git clone https://github.com/Alessandro-AP/RES-2021-Labo-SMTP.git
    ```
+
    
 2. Execute main's application in  ```MainApplication.java```
 
@@ -30,6 +31,10 @@ To do this, you can specify a list of victims to form groups of people. Each gro
 ---
 
 ### 2. Instructions configuration
+
+2. Run the application from the file ```MainApplication.java```
+
+### Instructions configuration
 
 To change the application settings you can edit the **configuration.properties** file where you can define 3 parameters :
 - server address

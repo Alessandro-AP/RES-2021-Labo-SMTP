@@ -49,8 +49,8 @@ it is possible to edit the files contained in the ```/data``` folder, in this fo
 
 **Exemple:** <br />
 ```sh
-Dear Tina <br />
-I love you. <br />
+Dear Tina
+I love you.
 ---
 ```
 

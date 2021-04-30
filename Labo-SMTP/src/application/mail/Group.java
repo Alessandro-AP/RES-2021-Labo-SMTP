@@ -2,7 +2,7 @@
  -----------------------------------------------------------------------------------
  Project     : RES-2021-Labo-SMTP
  File        : Group.java
- Author(s)   : Alessandro Parrino, Canton Dylan
+ Author(s)   : Alessandro Parrino, Dylan Canton
  Date        : 16.04.2021
 
  Description : Group of Persons
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A group is composed of N address
+ * A group is composed of N person, and a person contain a mail's address
  */
 public class Group {
 

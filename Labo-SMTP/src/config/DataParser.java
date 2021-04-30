@@ -1,8 +1,8 @@
 /*
  -----------------------------------------------------------------------------------
  Project     : RES-2021-Labo-SMTP
- File        : DataFileConfiguration.java
- Author(s)   : Alessandro Parrino, Canton Dylan
+ File        : DataParser.java
+ Author(s)   : Alessandro Parrino, Dylan Canton
  Date        : 16.04.2021
 
  Description : Parser for extracting email and messages from data files (.txt)
@@ -33,6 +33,7 @@ public class DataParser {
 
         LinkedList<Person> emails = new LinkedList<>();
         BufferedReader reader = null;
+
         try {
             reader = new BufferedReader(new FileReader(path, StandardCharsets.UTF_8));
             String line;
@@ -66,6 +67,7 @@ public class DataParser {
      * @return the list of messages
      */
     public static LinkedList<String> parseMessages(String path){
+
         LinkedList<String> messages = new LinkedList<>();
         BufferedReader reader = null;
 

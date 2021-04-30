@@ -1,8 +1,8 @@
 /*
  -----------------------------------------------------------------------------------
  Project     : RES-2021-Labo-SMTP
- File        : Message.java
- Author(s)   : Alessandro Parrino, Canton Dylan
+ File        : Email.java
+ Author(s)   : Alessandro Parrino, Dylan Canton
  Date        : 16.04.2021
 
  Description : Mail's message with heading

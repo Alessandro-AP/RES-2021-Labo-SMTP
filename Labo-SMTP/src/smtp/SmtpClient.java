@@ -2,7 +2,7 @@
  -----------------------------------------------------------------------------------
  Project     : RES-2021-Labo-SMTP
  File        : SmtpClient.java
- Author(s)   : Alessandro Parrino, Canton Dylan
+ Author(s)   : Alessandro Parrino, Dylan Canton
  Date        : 16.04.2021
 
  Description : SMTP client for sending mail
@@ -12,8 +12,6 @@
 package smtp;
 
 import application.mail.Email;
-import application.prank.Prank;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -63,13 +61,14 @@ public class SmtpClient {
 
         //Create socket
         socket = new Socket(serverAddress, serverPort);
-        //Writer
+        //Create Writer
         writer = new PrintWriter(socket.getOutputStream());
-        //Reader
+        //Create Reader
         reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         //String for reading
         String line;
 
+        //Read first line
         line = reader.readLine();
         log.info("<START CONNECTION> REPLY = " + line);
 
@@ -121,7 +120,8 @@ public class SmtpClient {
             writer.write("\r\n");
         }
 
-        //Configure message subject (with encoding UTF-8)
+        //Configure message subject (with encoding UTF-8, it need to convert the
+        // string subject into Base64)
         writer.write("Subject: " + "=?utf-8?B?" +
                      Base64.getEncoder().encodeToString(email.getSubject().getBytes())
                      + "?= " + "\r\n");

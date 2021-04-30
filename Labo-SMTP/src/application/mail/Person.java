@@ -2,7 +2,7 @@
  -----------------------------------------------------------------------------------
  Project     : RES-2021-Labo-SMTP
  File        : Person.java
- Author(s)   : Alessandro Parrino, Canton Dylan
+ Author(s)   : Alessandro Parrino, Dylan Canton
  Date        : 16.04.2021
 
  Description : Class for mail's representation

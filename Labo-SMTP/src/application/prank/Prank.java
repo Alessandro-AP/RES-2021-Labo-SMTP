@@ -2,7 +2,7 @@
  -----------------------------------------------------------------------------------
  Project     : RES-2021-Labo-SMTP
  File        : Prank.java
- Author(s)   : Alessandro Parrino, Canton Dylan
+ Author(s)   : Alessandro Parrino, Dylan Canton
  Date        : 16.04.2021
 
  Description : Contains sender, recipients and message
@@ -12,7 +12,6 @@
 package application.prank;
 
 import application.mail.Person;
-
 import java.util.ArrayList;
 import java.util.List;
 

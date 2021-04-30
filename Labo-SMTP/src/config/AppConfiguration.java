@@ -2,7 +2,7 @@
  -----------------------------------------------------------------------------------
  Project     : RES-2021-Labo-SMTP
  File        : AppConfiguration.java
- Author(s)   : Alessandro Parrino, Canton Dylan
+ Author(s)   : Alessandro Parrino, Dylan Canton
  Date        : 16.04.2021
 
  Description : Application's settings configuration
@@ -26,12 +26,21 @@ public class AppConfiguration {
     //Number of groups
     private int nbGroups ;
 
-    /** Constructor */
+    /**
+     * Constructor
+     *
+     * @param configFilePath Path to the file containing the configuration
+     * @throws IOException
+     */
     public AppConfiguration(String configFilePath) throws IOException {
+
         FileInputStream file = new FileInputStream(configFilePath);
         Properties properties = new Properties();
+
+        //Load the configuration file
         properties.load(file);
 
+        //Get informations from the loaded configuration file
         serverAddress   = properties.getProperty("serverAddress");
         noPort          = Integer.parseInt(properties.getProperty("serverPort"));
         nbGroups        = Integer.parseInt(properties.getProperty("numberOfGroups"));

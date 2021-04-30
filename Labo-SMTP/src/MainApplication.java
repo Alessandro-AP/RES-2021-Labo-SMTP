@@ -2,7 +2,7 @@
  -----------------------------------------------------------------------------------
  Project     : RES-2021-Labo-SMTP
  File        : MainApplication.java
- Author(s)   : Alessandro Parrino, Canton Dylan
+ Author(s)   : Alessandro Parrino, Dylan Canton
  Date        : 16.04.2021
 
  Description : Main program's function
@@ -20,7 +20,7 @@ import java.util.LinkedList;
 /**
  * Main class for application
  *
- * This class process text files, get a prank's list, build somes emails objects
+ * This class process text files, get a prank's list, build some emails objects
  * with informations in each prank and finally send emails with SMTP
  */
 public class MainApplication {
